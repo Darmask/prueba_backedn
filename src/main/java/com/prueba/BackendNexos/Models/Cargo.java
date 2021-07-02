@@ -24,7 +24,7 @@ public class Cargo  extends Auditoria{
   @Column(name = "car_id")
   private int id;
 
-  @Column(name = "cargo_nombre")
+  @Column(name = "car_nombre")
   @NotBlank(message = "El nombre para el cargo a registrar no puede ser vacío")
   @Size(min = 1, max = 255, message = "El nombre debe contener  mínimo un carácter y máximo 255")
   private String nombre;

@@ -1,19 +1,16 @@
 package com.prueba.BackendNexos.Controller;
 
-import com.prueba.BackendNexos.Dto.CargoDto;
 import com.prueba.BackendNexos.Dto.IngresoDto;
 import com.prueba.BackendNexos.Models.Ingreso;
+import com.prueba.BackendNexos.Service.IngresoService;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.validation.Valid;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.modelmapper.ModelMapper;
-
-import com.prueba.BackendNexos.Service.IngresoService;
-
-import javax.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,6 +29,7 @@ public class IngresoController {
     this.ingresoService = ingresoService;
     this.modelMapper = modelMapper;
   }
+
   @GetMapping
   public ResponseEntity<List<IngresoDto>> listar() {
     List<IngresoDto> ingresoDtos = this.ingresoService.listar()

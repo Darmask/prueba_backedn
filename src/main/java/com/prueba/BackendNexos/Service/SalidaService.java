@@ -6,6 +6,7 @@ import java.util.List;
 public interface SalidaService {
 
   Salida crear(Salida salida);
-  List<Salida>listar();
+
+  List<Salida> listar();
 }
 

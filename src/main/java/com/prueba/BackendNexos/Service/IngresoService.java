@@ -6,5 +6,6 @@ import java.util.List;
 public interface IngresoService {
 
   Ingreso crear(Ingreso ingreso);
+
   List<Ingreso>listar();
 }
